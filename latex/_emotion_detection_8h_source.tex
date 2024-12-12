@@ -1,0 +1,39 @@
+\doxysection{Emotion\+Detection.\+h}
+\hypertarget{_emotion_detection_8h_source}{}\label{_emotion_detection_8h_source}\index{FaceDetector/EmotionDetection.h@{FaceDetector/EmotionDetection.h}}
+\mbox{\hyperlink{_emotion_detection_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ MODEL\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MODEL\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_model_input_8h}{ModelInput.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_emotion_detection}{EmotionDetection}}\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Neural\ network}}
+\DoxyCodeLine{00027\ \ \ \ \ cv::dnn::Net\ neuralNetwork;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Mapping\ of\ the\ class\ id\ to\ the\ string\ label}}
+\DoxyCodeLine{00030\ \ \ \ \ std::map<int,\ std::string>\ idLabel;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_emotion_detection_a4f2fe10fe6a1359ccf289ab79a8dee9f}{EmotionDetection}}(\textcolor{keyword}{const}\ std::string\&\ TFfile);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_emotion_detection_a376ed9bc53ea6b3aa5bded943a3920c5}{\string~EmotionDetection}}()\ \{\};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00058\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_emotion_detection_aab48713ee6e9321e44a27a5a8a4f58d9}{emotionANL}}(\mbox{\hyperlink{class_model_input}{ModelInput}}\&\ image);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

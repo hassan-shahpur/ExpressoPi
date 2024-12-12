@@ -1,0 +1,140 @@
+\doxysection{Face\+Detector/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{FaceDetector/main.cpp@{FaceDetector/main.cpp}}
+
+
+The main class for the project.  
+
+
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include "{}Face\+Detector.\+h"{}}\newline
+{\ttfamily \#include "{}Model\+Input.\+h"{}}\newline
+{\ttfamily \#include "{}Emotion\+Detection.\+h"{}}\newline
+{\ttfamily \#include "{}camera.\+h"{}}\newline
+{\ttfamily \#include "{}menuscreen.\+h"{}}\newline
+{\ttfamily \#include $<$QTimer$>$}\newline
+{\ttfamily \#include $<$QApplication$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_a5f107cd1cc376610dfce373a2f7eec7b}{initialize\+Camera\+And\+Objects}} (\mbox{\hyperlink{class_camera}{Camera}} \&camera, \mbox{\hyperlink{class_emotion_detection}{Emotion\+Detection}} \&model, \mbox{\hyperlink{class_face_detector}{Face\+Detector}} \&face\+\_\+detector)
+\begin{DoxyCompactList}\small\item\em Initializes the camera and other objects needed for the program to run. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ae280694fc36dfff40d503edad0ddaf09}{process\+Frame}} (\mbox{\hyperlink{class_camera}{Camera}} \&camera, \mbox{\hyperlink{class_face_detector}{Face\+Detector}} \&face\+\_\+detector, \mbox{\hyperlink{class_emotion_detection}{Emotion\+Detection}} \&model)
+\begin{DoxyCompactList}\small\item\em Processes each frame of the video feed. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a21b71912e73af34253c305192ee5076d}\label{main_8cpp_a21b71912e73af34253c305192ee5076d} 
+const std\+::string {\bfseries WINDOW} = "{}Expresso\+PI"{}
+\item 
+\Hypertarget{main_8cpp_a0afee49efb4860ae48b2767b897e75b4}\label{main_8cpp_a0afee49efb4860ae48b2767b897e75b4} 
+const std\+::string {\bfseries TF} = "{}../cascades/tensorflow\+\_\+model.\+pb"{}
+\item 
+\Hypertarget{main_8cpp_a00b72697437fab949081c7ca82e105f2}\label{main_8cpp_a00b72697437fab949081c7ca82e105f2} 
+const std\+::string {\bfseries CASCADECLASSIFIERPATH} = "{}../cascades/haarcascade\+\_\+frontalface\+\_\+alt2.\+xml"{}
+\item 
+\Hypertarget{main_8cpp_a2008f4ab70b5e4104c2ca43932536ddf}\label{main_8cpp_a2008f4ab70b5e4104c2ca43932536ddf} 
+\mbox{\hyperlink{class_camera}{Camera}} {\bfseries camera}
+\item 
+\Hypertarget{main_8cpp_a30bbe7865a0deaad2d3acfc62e8c8edd}\label{main_8cpp_a30bbe7865a0deaad2d3acfc62e8c8edd} 
+\mbox{\hyperlink{class_emotion_detection}{Emotion\+Detection}} {\bfseries model} (TF)
+\item 
+\Hypertarget{main_8cpp_ae8385e7e13d6b8ebbe8f9058f2e534fa}\label{main_8cpp_ae8385e7e13d6b8ebbe8f9058f2e534fa} 
+\mbox{\hyperlink{class_face_detector}{Face\+Detector}} {\bfseries face\+\_\+detector}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class for the project. 
+
+\begin{DoxyAuthor}{Author}
+Hussein Fahd, Kishor Loganathan, Hassan Shahpurwala, Rishyanth Varma Thotakura, Delicia Wong 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/04-\/01
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a5f107cd1cc376610dfce373a2f7eec7b}\label{main_8cpp_a5f107cd1cc376610dfce373a2f7eec7b} 
+\index{main.cpp@{main.cpp}!initializeCameraAndObjects@{initializeCameraAndObjects}}
+\index{initializeCameraAndObjects@{initializeCameraAndObjects}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{initializeCameraAndObjects()}{initializeCameraAndObjects()}}
+{\footnotesize\ttfamily bool initialize\+Camera\+And\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} \&}]{camera,  }\item[{\mbox{\hyperlink{class_emotion_detection}{Emotion\+Detection}} \&}]{model,  }\item[{\mbox{\hyperlink{class_face_detector}{Face\+Detector}} \&}]{face\+\_\+detector }\end{DoxyParamCaption})}
+
+
+
+Initializes the camera and other objects needed for the program to run. 
+
+This function initializes all of the objects that will be necessary for the program to run, including the camera, emotion detection model, and facedetector
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & \doxylink{class_camera}{Camera} object \\
+\hline
+{\em model} & \doxylink{class_emotion_detection}{Emotion\+Detection} model \\
+\hline
+{\em face\+\_\+detector} & \doxylink{class_face_detector}{Face\+Detector} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the initialization was successful 
+
+false if the initialization failed 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main function. 
+
+The Main function displays the menuscreen and emits the signal to process the frames
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int value representing the exit status of the application. 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_ae280694fc36dfff40d503edad0ddaf09}\label{main_8cpp_ae280694fc36dfff40d503edad0ddaf09} 
+\index{main.cpp@{main.cpp}!processFrame@{processFrame}}
+\index{processFrame@{processFrame}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{processFrame()}{processFrame()}}
+{\footnotesize\ttfamily void process\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} \&}]{camera,  }\item[{\mbox{\hyperlink{class_face_detector}{Face\+Detector}} \&}]{face\+\_\+detector,  }\item[{\mbox{\hyperlink{class_emotion_detection}{Emotion\+Detection}} \&}]{model }\end{DoxyParamCaption})}
+
+
+
+Processes each frame of the video feed. 
+
+If a frame is captured from the camera, the captured frame will be processed. A rectangle will be drawn around the detected face, and it will display the detected emotions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & \doxylink{class_camera}{Camera} object \\
+\hline
+{\em face\+\_\+detector} & Face detector \\
+\hline
+{\em model} & \doxylink{class_emotion_detection}{Emotion\+Detection} model \\
+\hline
+\end{DoxyParams}

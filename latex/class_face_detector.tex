@@ -1,0 +1,128 @@
+\doxysection{Face\+Detector Class Reference}
+\hypertarget{class_face_detector}{}\label{class_face_detector}\index{FaceDetector@{FaceDetector}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_face_detector_ab7ecd6d1c9fe5d343fc4f7631467cb78}{Face\+Detector}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Face Detector object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_input}{Model\+Input}} \mbox{\hyperlink{class_face_detector_abe424ee04f5f69b1626fcff664261d8a}{draw\+Frame}} (cv\+::\+Mat \&image)
+\begin{DoxyCompactList}\small\item\em Detects faces in the given image and annotates them with bounding boxes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_face_detector_a2ebb686cbe8766bf0e8d82e890df81bf}{draw\+Box}} (cv\+::\+Mat \&image)
+\begin{DoxyCompactList}\small\item\em Draws bounding boxes around detected faces in the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_input}{Model\+Input}} \mbox{\hyperlink{class_face_detector_a0639611257ef6a6a072fd00aed05d354}{display\+Emotion}} (\mbox{\hyperlink{class_model_input}{Model\+Input}} \&annotated\+Frame, std\+::vector$<$ std\+::string $>$ \&expression\+Label)
+\begin{DoxyCompactList}\small\item\em Overlays emotion prediction text on the image near detected faces. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_face_detector_a7a2b61c062ce3506b42244398c7d01fb}{prepare\+Frame\+For\+Detection}} (const cv\+::\+Mat \&image)
+\begin{DoxyCompactList}\small\item\em Prepares the image by converting it to grayscale and normalizing its histogram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_face_detector_a563f32195052f6d5f3eae42b110a104b}\label{class_face_detector_a563f32195052f6d5f3eae42b110a104b} 
+cv\+::\+Cascade\+Classifier {\bfseries cascade}
+\item 
+\Hypertarget{class_face_detector_a3fee00713d72b71aad79098677e311d0}\label{class_face_detector_a3fee00713d72b71aad79098677e311d0} 
+std\+::vector$<$ cv\+::\+Rect $>$ {\bfseries detected\+Faces}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_face_detector_ab7ecd6d1c9fe5d343fc4f7631467cb78}\label{class_face_detector_ab7ecd6d1c9fe5d343fc4f7631467cb78} 
+\index{FaceDetector@{FaceDetector}!FaceDetector@{FaceDetector}}
+\index{FaceDetector@{FaceDetector}!FaceDetector@{FaceDetector}}
+\doxysubsubsection{\texorpdfstring{FaceDetector()}{FaceDetector()}}
+{\footnotesize\ttfamily Face\+Detector\+::\+Face\+Detector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Face Detector object. 
+
+This constructor initializes the \doxylink{class_face_detector}{Face\+Detector} object by loading the cascade classifier. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_face_detector_a0639611257ef6a6a072fd00aed05d354}\label{class_face_detector_a0639611257ef6a6a072fd00aed05d354} 
+\index{FaceDetector@{FaceDetector}!displayEmotion@{displayEmotion}}
+\index{displayEmotion@{displayEmotion}!FaceDetector@{FaceDetector}}
+\doxysubsubsection{\texorpdfstring{displayEmotion()}{displayEmotion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_input}{Model\+Input}} Face\+Detector\+::display\+Emotion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_input}{Model\+Input}} \&}]{annotated\+Frame,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{expression\+Label }\end{DoxyParamCaption})}
+
+
+
+Overlays emotion prediction text on the image near detected faces. 
+
+If a face was detected in the frame, display\+Emotion will write the emotion that was predicted by the \doxylink{class_emotion_detection}{Emotion\+Detection} class onto the screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em annotated\+Frame} & The frame on which a face was detected and a rectangle was drawn around the face. \\
+\hline
+{\em expression\+Label} & The predicted expression. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_model_input}{Model\+Input} The annotated frame with a label indicating the expression shown on the detected face. 
+\end{DoxyReturn}
+\Hypertarget{class_face_detector_a2ebb686cbe8766bf0e8d82e890df81bf}\label{class_face_detector_a2ebb686cbe8766bf0e8d82e890df81bf} 
+\index{FaceDetector@{FaceDetector}!drawBox@{drawBox}}
+\index{drawBox@{drawBox}!FaceDetector@{FaceDetector}}
+\doxysubsubsection{\texorpdfstring{drawBox()}{drawBox()}}
+{\footnotesize\ttfamily void Face\+Detector\+::draw\+Box (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Draws bounding boxes around detected faces in the image. 
+
+This function first prepares the received frame for facial detection, then detects faces present in the prepared frame using cascade classifer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The captured frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_face_detector_abe424ee04f5f69b1626fcff664261d8a}\label{class_face_detector_abe424ee04f5f69b1626fcff664261d8a} 
+\index{FaceDetector@{FaceDetector}!drawFrame@{drawFrame}}
+\index{drawFrame@{drawFrame}!FaceDetector@{FaceDetector}}
+\doxysubsubsection{\texorpdfstring{drawFrame()}{drawFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_input}{Model\+Input}} Face\+Detector\+::draw\+Frame (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Detects faces in the given image and annotates them with bounding boxes. 
+
+The draw\+Frame function receives the frame and draws a rectangle around detected faces. The region of interest (ROI) of the image is set in the image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The frame from which the faces will be detected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_model_input}{Model\+Input} The annotated frame. 
+\end{DoxyReturn}
+\Hypertarget{class_face_detector_a7a2b61c062ce3506b42244398c7d01fb}\label{class_face_detector_a7a2b61c062ce3506b42244398c7d01fb} 
+\index{FaceDetector@{FaceDetector}!prepareFrameForDetection@{prepareFrameForDetection}}
+\index{prepareFrameForDetection@{prepareFrameForDetection}!FaceDetector@{FaceDetector}}
+\doxysubsubsection{\texorpdfstring{prepareFrameForDetection()}{prepareFrameForDetection()}}
+{\footnotesize\ttfamily cv\+::\+Mat Face\+Detector\+::prepare\+Frame\+For\+Detection (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prepares the image by converting it to grayscale and normalizing its histogram. 
+
+This function prepares the image for detection analysis by converting the image from colour to grayscale, then equalizing the histogram of the image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The unprocessed image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat The equalized image. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Face\+Detector/\mbox{\hyperlink{_face_detector_8h}{Face\+Detector.\+h}}\item 
+Face\+Detector/Face\+Detector.\+cpp\end{DoxyCompactItemize}

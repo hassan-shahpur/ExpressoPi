@@ -1,0 +1,30 @@
+\doxysection{camera.\+h}
+\hypertarget{camera_8h_source}{}\label{camera_8h_source}\index{FaceDetector/camera.h@{FaceDetector/camera.h}}
+\mbox{\hyperlink{camera_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ CAMERA\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ CAMERA\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_camera}{Camera}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_camera_ab993db3924fa3ef8f0a9df0d89033f69}{Camera}}(\textcolor{keywordtype}{int}\ deviceID\ =\ 0);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_camera_ae80a679505ff204a0456bb3e2083eeb0}{initialize}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \ \ \ \ cv::Mat\ \mbox{\hyperlink{class_camera_adad249267c696156aaacc54148c97dea}{captureFrame}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_camera_ab26419a3af317221e08061e3106f8693}{release}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00056\ \ \ \ \ cv::VideoCapture\ cap;\ \textcolor{comment}{//VideoCapture\ object\ to\ interact\ with\ camera}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ deviceID;\ \textcolor{comment}{//ID\ for\ the\ camera\ device}}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CAMERA\_H}}
+
+\end{DoxyCode}

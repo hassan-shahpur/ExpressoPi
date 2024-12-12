@@ -1,0 +1,172 @@
+\doxysection{Model\+Input Class Reference}
+\hypertarget{class_model_input}{}\label{class_model_input}\index{ModelInput@{ModelInput}}
+
+
+Manages frame preprocessing for emotion detection analysis.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Input.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_input_a06fea88f3300fefe5f2b07bfba1c68e1}{Model\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Model Input object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_input_a75626e4e1e8c7b359fe83273f3a801b0}{\texorpdfstring{$\sim$}{\string~}\+Model\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Model Input object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_input_a5071349ee2a7b9439bd2eae9edcdb41c}{IMGprocess}} ()
+\begin{DoxyCompactList}\small\item\em Processes input images for further analysis. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_model_input_a81165db6ca9dae0858159a5ff71d3257}{get\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Get the Frame object. \end{DoxyCompactList}\item 
+std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{class_model_input_aed95eb5f913f0362101ffb442f5b3265}{get\+IMG}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves regions of interest within the current frame. \end{DoxyCompactList}\item 
+std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{class_model_input_a016e02ff84eba0dc6a48404abf7429b4}{get\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Get the Input object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_input_a501c58351f626894f3f1b0a1f812856c}{set\+Frame}} (cv\+::\+Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Set current frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_input_ae22c9e076cac6b164964163eca2b545d}{set\+IMG}} (cv\+::\+Mat \&interestpoints)
+\begin{DoxyCompactList}\small\item\em Set a single region of interest. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_model_input_ab75f8b26e21c235725745b27f7418c4d}\label{class_model_input_ab75f8b26e21c235725745b27f7418c4d} 
+cv\+::\+Mat {\bfseries \+\_\+frame}
+\item 
+\Hypertarget{class_model_input_a0ecbae06802df81ea5bcc6b52bcb7751}\label{class_model_input_a0ecbae06802df81ea5bcc6b52bcb7751} 
+std\+::vector$<$ cv\+::\+Mat $>$ {\bfseries faceinframe}
+\item 
+\Hypertarget{class_model_input_ad5c53bae1b9154a9b078fd65b97af740}\label{class_model_input_ad5c53bae1b9154a9b078fd65b97af740} 
+std\+::vector$<$ cv\+::\+Mat $>$ {\bfseries input}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages frame preprocessing for emotion detection analysis. 
+
+The \doxylink{class_model_input}{Model\+Input} class handles the preprocessing of input frames for emotion detection analysis. It provides methods to process input images, set and retrieve frames, and manage regions of interest. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_model_input_a06fea88f3300fefe5f2b07bfba1c68e1}\label{class_model_input_a06fea88f3300fefe5f2b07bfba1c68e1} 
+\index{ModelInput@{ModelInput}!ModelInput@{ModelInput}}
+\index{ModelInput@{ModelInput}!ModelInput@{ModelInput}}
+\doxysubsubsection{\texorpdfstring{ModelInput()}{ModelInput()}}
+{\footnotesize\ttfamily Model\+Input\+::\+Model\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Model Input object. 
+
+The constructor constructs a new Model Input object to process the images from the camera. \Hypertarget{class_model_input_a75626e4e1e8c7b359fe83273f3a801b0}\label{class_model_input_a75626e4e1e8c7b359fe83273f3a801b0} 
+\index{ModelInput@{ModelInput}!````~ModelInput@{\texorpdfstring{$\sim$}{\string~}ModelInput}}
+\index{````~ModelInput@{\texorpdfstring{$\sim$}{\string~}ModelInput}!ModelInput@{ModelInput}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ModelInput()}{\string~ModelInput()}}
+{\footnotesize\ttfamily Model\+Input\+::\texorpdfstring{$\sim$}{\string~}\+Model\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Model Input object. 
+
+The destructor destroys the Model Input object, deallocating the memory associated with it. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_model_input_a81165db6ca9dae0858159a5ff71d3257}\label{class_model_input_a81165db6ca9dae0858159a5ff71d3257} 
+\index{ModelInput@{ModelInput}!getFrame@{getFrame}}
+\index{getFrame@{getFrame}!ModelInput@{ModelInput}}
+\doxysubsubsection{\texorpdfstring{getFrame()}{getFrame()}}
+{\footnotesize\ttfamily cv\+::\+Mat Model\+Input\+::get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Frame object. 
+
+This retrieves the current frame that is stored in the \doxylink{class_model_input}{Model\+Input} instance.
+
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat The frame retrieved from the \doxylink{class_model_input}{Model\+Input} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_model_input_aed95eb5f913f0362101ffb442f5b3265}\label{class_model_input_aed95eb5f913f0362101ffb442f5b3265} 
+\index{ModelInput@{ModelInput}!getIMG@{getIMG}}
+\index{getIMG@{getIMG}!ModelInput@{ModelInput}}
+\doxysubsubsection{\texorpdfstring{getIMG()}{getIMG()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Mat $>$ Model\+Input\+::get\+IMG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves regions of interest within the current frame. 
+
+The get\+IMG function retrieves a collection of images or regions of interest from within the current frame.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$cv\+::\+Mat$>$ A copy of the faceinframe variable, which contains images or regions of interest from the current frame. 
+\end{DoxyReturn}
+\Hypertarget{class_model_input_a016e02ff84eba0dc6a48404abf7429b4}\label{class_model_input_a016e02ff84eba0dc6a48404abf7429b4} 
+\index{ModelInput@{ModelInput}!getInput@{getInput}}
+\index{getInput@{getInput}!ModelInput@{ModelInput}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Mat $>$ Model\+Input\+::get\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Input object. 
+
+get\+Input retrieved a collection of processed images that can be used as input for the emotion detection model \begin{DoxyReturn}{Returns}
+std\+::vector$<$cv\+::\+Mat$>$ A copy of the input variable, which contains processed images to be used as input for the model. 
+\end{DoxyReturn}
+\Hypertarget{class_model_input_a5071349ee2a7b9439bd2eae9edcdb41c}\label{class_model_input_a5071349ee2a7b9439bd2eae9edcdb41c} 
+\index{ModelInput@{ModelInput}!IMGprocess@{IMGprocess}}
+\index{IMGprocess@{IMGprocess}!ModelInput@{ModelInput}}
+\doxysubsubsection{\texorpdfstring{IMGprocess()}{IMGprocess()}}
+{\footnotesize\ttfamily void Model\+Input\+::\+IMGprocess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Processes input images for further analysis. 
+
+The \doxylink{class_model_input}{Model\+Input} class processes the input frames stored in the faceinframe vector by performing the following\+:
+\begin{DoxyItemize}
+\item Convert the image to grayscale using the Convert\+To\+Grayscale class
+\item Resize the grayscale image to model input size
+\item Normalize pixel values of the resized image
+\item Store the processed images in the input vector. 
+\end{DoxyItemize}\Hypertarget{class_model_input_a501c58351f626894f3f1b0a1f812856c}\label{class_model_input_a501c58351f626894f3f1b0a1f812856c} 
+\index{ModelInput@{ModelInput}!setFrame@{setFrame}}
+\index{setFrame@{setFrame}!ModelInput@{ModelInput}}
+\doxysubsubsection{\texorpdfstring{setFrame()}{setFrame()}}
+{\footnotesize\ttfamily void Model\+Input\+::set\+Frame (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{frame }\end{DoxyParamCaption})}
+
+
+
+Set current frame. 
+
+This function sets the current frame for the \doxylink{class_model_input}{Model\+Input} instance
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The current frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_input_ae22c9e076cac6b164964163eca2b545d}\label{class_model_input_ae22c9e076cac6b164964163eca2b545d} 
+\index{ModelInput@{ModelInput}!setIMG@{setIMG}}
+\index{setIMG@{setIMG}!ModelInput@{ModelInput}}
+\doxysubsubsection{\texorpdfstring{setIMG()}{setIMG()}}
+{\footnotesize\ttfamily void Model\+Input\+::set\+IMG (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{interestpoints }\end{DoxyParamCaption})}
+
+
+
+Set a single region of interest. 
+
+set\+IMG adds a single region of interest to the faceinframe vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em interestpoints} & Region of interest to be added to faceinframe. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Face\+Detector/\mbox{\hyperlink{_model_input_8h}{Model\+Input.\+h}}\item 
+Face\+Detector/Model\+Input.\+cpp\end{DoxyCompactItemize}

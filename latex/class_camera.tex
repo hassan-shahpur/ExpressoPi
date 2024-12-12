@@ -1,0 +1,107 @@
+\doxysection{Camera Class Reference}
+\hypertarget{class_camera}{}\label{class_camera}\index{Camera@{Camera}}
+
+
+This file defines a \doxylink{class_camera}{Camera} class, which provides the functionality to interact with a camera device.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_ab993db3924fa3ef8f0a9df0d89033f69}{Camera}} (int device\+ID=0)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_camera}{Camera} class constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_ae80a679505ff204a0456bb3e2083eeb0}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Function to initialize the camera. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_camera_adad249267c696156aaacc54148c97dea}{capture\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Function to capture a single frame from the webcam. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ab26419a3af317221e08061e3106f8693}{release}} ()
+\begin{DoxyCompactList}\small\item\em Release the video capture object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_camera_a725eb67c7b54fe20f29861f8f592bd7b}\label{class_camera_a725eb67c7b54fe20f29861f8f592bd7b} 
+cv\+::\+Video\+Capture {\bfseries cap}
+\item 
+\Hypertarget{class_camera_ae1ffc9c39fcdc9c12d5ecf3a7e371239}\label{class_camera_ae1ffc9c39fcdc9c12d5ecf3a7e371239} 
+int {\bfseries device\+ID}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file defines a \doxylink{class_camera}{Camera} class, which provides the functionality to interact with a camera device. 
+
+This file defines the \doxylink{class_camera}{Camera} class, which provides the functionality to interact with a camera device, including initializing the camera, capturing frames, and releasing the camera resources 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_camera_ab993db3924fa3ef8f0a9df0d89033f69}\label{class_camera_ab993db3924fa3ef8f0a9df0d89033f69} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{int}]{device\+ID = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_camera}{Camera} class constructor. 
+
+A constructor to construct an object of type \doxylink{class_camera}{Camera} with 0 as a default webcam ID
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+ID} & The ID of a webcam \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_adad249267c696156aaacc54148c97dea}\label{class_camera_adad249267c696156aaacc54148c97dea} 
+\index{Camera@{Camera}!captureFrame@{captureFrame}}
+\index{captureFrame@{captureFrame}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{captureFrame()}{captureFrame()}}
+{\footnotesize\ttfamily cv\+::\+Mat Camera\+::capture\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to capture a single frame from the webcam. 
+
+This function grabs and reads a single frame captured from the camera if it has been successfully opened.
+
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat The captured frame from the camera, or an empty cv\+::\+Mat if the camera was not successfully opened. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_ae80a679505ff204a0456bb3e2083eeb0}\label{class_camera_ae80a679505ff204a0456bb3e2083eeb0} 
+\index{Camera@{Camera}!initialize@{initialize}}
+\index{initialize@{initialize}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool Camera\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to initialize the camera. 
+
+This function attempts to open the camera device, then checks to see if it has successfully been opened.
+
+\begin{DoxyReturn}{Returns}
+True if the camera was successfully opened. 
+
+False if the camera was not opened. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_ab26419a3af317221e08061e3106f8693}\label{class_camera_ab26419a3af317221e08061e3106f8693} 
+\index{Camera@{Camera}!release@{release}}
+\index{release@{release}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void Camera\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Release the video capture object. 
+
+This function will close the capturing device, deallocating the memory occupied by the object. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Face\+Detector/\mbox{\hyperlink{camera_8h}{camera.\+h}}\item 
+Face\+Detector/camera.\+cpp\end{DoxyCompactItemize}

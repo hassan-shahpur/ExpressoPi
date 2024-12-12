@@ -1,0 +1,39 @@
+\doxysection{Face\+Detector.\+h}
+\hypertarget{_face_detector_8h_source}{}\label{_face_detector_8h_source}\index{FaceDetector/FaceDetector.h@{FaceDetector/FaceDetector.h}}
+\mbox{\hyperlink{_face_detector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ FACEDETECTOR\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ FACEDETECTOR\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_model_input_8h}{ModelInput.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ Path\ to\ the\ cascade\ classifier\ for\ face\ detection.}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ std::string\ CASCADECLASSIFIERPATH;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_face_detector}{FaceDetector}}\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Classifier\ for\ detecting\ faces.}}
+\DoxyCodeLine{00033\ \ \ \ \ cv::CascadeClassifier\ cascade;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00042\ \ \ \ \ cv::Mat\ \mbox{\hyperlink{class_face_detector_a7a2b61c062ce3506b42244398c7d01fb}{prepareFrameForDetection}}(\textcolor{keyword}{const}\ cv::Mat\&\ image);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Stores\ the\ locations\ of\ detected\ faces\ as\ rectangles.}}
+\DoxyCodeLine{00045\ \ \ \ \ std::vector<cv::Rect>\ detectedFaces;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_face_detector_ab7ecd6d1c9fe5d343fc4f7631467cb78}{FaceDetector}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_model_input}{ModelInput}}\ \mbox{\hyperlink{class_face_detector_abe424ee04f5f69b1626fcff664261d8a}{drawFrame}}(cv::Mat\&\ image);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_face_detector_a2ebb686cbe8766bf0e8d82e890df81bf}{drawBox}}(cv::Mat\&\ image);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{class_model_input}{ModelInput}}\ \mbox{\hyperlink{class_face_detector_a0639611257ef6a6a072fd00aed05d354}{displayEmotion}}(\mbox{\hyperlink{class_model_input}{ModelInput}}\&\ annotatedFrame,\ std::vector<std::string>\&\ expressionLabel);}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FACEDETECTOR\_H}}
+
+\end{DoxyCode}

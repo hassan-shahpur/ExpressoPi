@@ -1,0 +1,37 @@
+\doxysection{menuscreen.\+h}
+\hypertarget{menuscreen_8h_source}{}\label{menuscreen_8h_source}\index{FaceDetector/menuscreen.h@{FaceDetector/menuscreen.h}}
+\mbox{\hyperlink{menuscreen_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ MENUSCREEN\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MENUSCREEN\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_menu_screen}{MenuScreen}};}
+\DoxyCodeLine{00022\ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_menu_screen}{MenuScreen}}\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_menu_screen_a31c35664cca381f419c3d2d4008217f7}{MenuScreen}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_menu_screen_a7225a6ae077b96743b49281526daae35}{\string~MenuScreen}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ signals:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_screen_a182eb5034c17dd2b4b1371ff62ba7a0d}{getStartedClicked}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_screen_a060740d9abd755efdf7cd0f411353daa}{processFrameSignal}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_screen_a892b431426164078d9b2454fe72e02d0}{on\_pushButtonGetStarted\_2\_clicked}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ Ui::MenuScreen\ *ui;\ \textcolor{comment}{//pointer\ to\ UI\ object}}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MENUSCREEN\_H}}
+
+\end{DoxyCode}

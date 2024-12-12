@@ -1,0 +1,79 @@
+\doxysection{Emotion\+Detection Class Reference}
+\hypertarget{class_emotion_detection}{}\label{class_emotion_detection}\index{EmotionDetection@{EmotionDetection}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_emotion_detection_a4f2fe10fe6a1359ccf289ab79a8dee9f}{Emotion\+Detection}} (const std\+::string \&TFfile)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_emotion_detection}{Emotion\+Detection} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_emotion_detection_a376ed9bc53ea6b3aa5bded943a3920c5}{\texorpdfstring{$\sim$}{\string~}\+Emotion\+Detection}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Emotion Detection object. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_emotion_detection_aab48713ee6e9321e44a27a5a8a4f58d9}{emotion\+ANL}} (\mbox{\hyperlink{class_model_input}{Model\+Input}} \&image)
+\begin{DoxyCompactList}\small\item\em Function to analyze the emotion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_emotion_detection_add5d1ec7b4d48922c1a2fb7606162392}\label{class_emotion_detection_add5d1ec7b4d48922c1a2fb7606162392} 
+cv\+::dnn\+::\+Net {\bfseries neural\+Network}
+\item 
+\Hypertarget{class_emotion_detection_aa2052ba911a3a2970fc2d675f7332b68}\label{class_emotion_detection_aa2052ba911a3a2970fc2d675f7332b68} 
+std\+::map$<$ int, std\+::string $>$ {\bfseries id\+Label}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_emotion_detection_a4f2fe10fe6a1359ccf289ab79a8dee9f}\label{class_emotion_detection_a4f2fe10fe6a1359ccf289ab79a8dee9f} 
+\index{EmotionDetection@{EmotionDetection}!EmotionDetection@{EmotionDetection}}
+\index{EmotionDetection@{EmotionDetection}!EmotionDetection@{EmotionDetection}}
+\doxysubsubsection{\texorpdfstring{EmotionDetection()}{EmotionDetection()}}
+{\footnotesize\ttfamily Emotion\+Detection\+::\+Emotion\+Detection (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{TFfile }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_emotion_detection}{Emotion\+Detection} object. 
+
+The \doxylink{class_emotion_detection}{Emotion\+Detection} constructor constructs a new \doxylink{class_emotion_detection}{Emotion\+Detection} object with a Tensor\+Flow Model file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em TFfile} & The Tensor\+Flow Model file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_emotion_detection_a376ed9bc53ea6b3aa5bded943a3920c5}\label{class_emotion_detection_a376ed9bc53ea6b3aa5bded943a3920c5} 
+\index{EmotionDetection@{EmotionDetection}!````~EmotionDetection@{\texorpdfstring{$\sim$}{\string~}EmotionDetection}}
+\index{````~EmotionDetection@{\texorpdfstring{$\sim$}{\string~}EmotionDetection}!EmotionDetection@{EmotionDetection}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EmotionDetection()}{\string~EmotionDetection()}}
+{\footnotesize\ttfamily Emotion\+Detection\+::\texorpdfstring{$\sim$}{\string~}\+Emotion\+Detection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Emotion Detection object. 
+
+The destructor for the \doxylink{class_emotion_detection}{Emotion\+Detection} object, destroying the object and deallocating the memory associated with it. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_emotion_detection_aab48713ee6e9321e44a27a5a8a4f58d9}\label{class_emotion_detection_aab48713ee6e9321e44a27a5a8a4f58d9} 
+\index{EmotionDetection@{EmotionDetection}!emotionANL@{emotionANL}}
+\index{emotionANL@{emotionANL}!EmotionDetection@{EmotionDetection}}
+\doxysubsubsection{\texorpdfstring{emotionANL()}{emotionANL()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Emotion\+Detection\+::emotion\+ANL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_input}{Model\+Input}} \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Function to analyze the emotion. 
+
+This function gets the pre-\/processed image and converts it into a blob which can be fed into the neural network. The class\+ID with the highest probability is determined, and the corresponding emotion label is added to a vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The pre-\/processed image which will be analyzed to determine the emotions of the person in the image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$ The vector of emotion labels predicted for the image. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Face\+Detector/\mbox{\hyperlink{_emotion_detection_8h}{Emotion\+Detection.\+h}}\item 
+Face\+Detector/Emotion\+Detection.\+cpp\end{DoxyCompactItemize}

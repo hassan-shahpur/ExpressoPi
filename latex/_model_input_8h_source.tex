@@ -1,0 +1,59 @@
+\doxysection{Model\+Input.\+h}
+\hypertarget{_model_input_8h_source}{}\label{_model_input_8h_source}\index{FaceDetector/ModelInput.h@{FaceDetector/ModelInput.h}}
+\mbox{\hyperlink{_model_input_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ ModelInput\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ModelInput\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_model_input}{ModelInput}}\ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ the\ full\ video\ frame}}
+\DoxyCodeLine{00027\ \ \ \ \ cv::Mat\ \_frame;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ region\ of\ interest\ within\ the\ bounding\ box}}
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<cv::Mat>\ faceinframe;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ preprocessed\ image\ ready\ for\ model}}
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<cv::Mat>\ \ input;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_model_input_a06fea88f3300fefe5f2b07bfba1c68e1}{ModelInput}}()\ \{\};}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_model_input_a75626e4e1e8c7b359fe83273f3a801b0}{\string~ModelInput}}()\ \{\};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_input_a5071349ee2a7b9439bd2eae9edcdb41c}{IMGprocess}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ cv::Mat\ \mbox{\hyperlink{class_model_input_a81165db6ca9dae0858159a5ff71d3257}{getFrame}}();}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ std::vector<cv::Mat>\ \mbox{\hyperlink{class_model_input_aed95eb5f913f0362101ffb442f5b3265}{getIMG}}();}
+\DoxyCodeLine{00075\ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ std::vector<cv::Mat>\ \mbox{\hyperlink{class_model_input_a016e02ff84eba0dc6a48404abf7429b4}{getInput}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_input_a501c58351f626894f3f1b0a1f812856c}{setFrame}}(cv::Mat\&\ frame);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_input_ae22c9e076cac6b164964163eca2b545d}{setIMG}}(cv::Mat\&\ interestpoints);}
+\DoxyCodeLine{00099\ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

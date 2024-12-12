@@ -1,0 +1,3 @@
+/Users/hassanshahpur/Desktop/ExpressoPI/build/CMakeFiles/camera.dir
+/Users/hassanshahpur/Desktop/ExpressoPI/build/CMakeFiles/edit_cache.dir
+/Users/hassanshahpur/Desktop/ExpressoPI/build/CMakeFiles/rebuild_cache.dir
