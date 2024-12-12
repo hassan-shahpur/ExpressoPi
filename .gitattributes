@@ -1,6 +1,2 @@
-Makefile linguist-generated
-*.tex linguist-generated
-
-*.html linguist-vendored
-*.css linguist-vendored
-*.js linguist-vendored
+* linguist-vendored
+*.C++ linguist-vendored=false
